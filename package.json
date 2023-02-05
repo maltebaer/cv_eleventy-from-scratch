@@ -1,0 +1,23 @@
+{
+    "name": "cv_eleventy-from-scratch",
+    "version": "1.0.0",
+    "description": "",
+    "main": ".eleventy.js",
+    "scripts": {
+        "start": "npx eleventy --serve"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/maltebaer/cv_eleventy-from-scratch.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/maltebaer/cv_eleventy-from-scratch/issues"
+    },
+    "homepage": "https://github.com/maltebaer/cv_eleventy-from-scratch#readme",
+    "dependencies": {
+        "@11ty/eleventy": "^1.0.2"
+    }
+}
