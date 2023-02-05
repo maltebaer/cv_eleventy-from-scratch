@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+        <title>{{ title }}</title>
+    </head>
+    <body>
+        {% include "partials/header.html" %}
+
+        <div class="sidebar | region wrapper">
+            <aside class="flow">
+                {% include "partials/sidebar.html" %}
+            </aside>
+
+            <main tabindex="-1" id="main-content" class="flow">
+                {% block content %}{% endblock %}
+            </main>
+        </div>
+
+        {% include "partials/footer.html" %}
+    </body>
+</html>

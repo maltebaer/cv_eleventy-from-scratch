@@ -1,0 +1,32 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+    <article class="flow">
+        <header class="flow">
+            <h1>{{ title }}</h1>
+
+            <p>{{ subtitle }}</p>
+        </header>
+
+        <p>{{ description }}</p>
+
+        <ul>
+            <li>{{ location }}</li>
+            <li>
+                <a href="mailto:{{ mail }}">{{ mail }}</a>
+            </li>
+            {% for item in social %}
+                <li>
+                    <a
+                        href="{{ item.url }}"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        {{ item.text }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </article>
+
+    {% include "partials/cta.html" %}
+{% endblock %}

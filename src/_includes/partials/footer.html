@@ -1,0 +1,20 @@
+<footer class="wrapper | tmp | flex flex-wrap justify-between gap-m">
+    <p>heavily inspired by <a href="https://buildexcellentwebsit.es" target="_blank" rel="noopener noreferrer">buildexcellentwebsit.es</a>
+    </p>
+    <span class="tmp | flex gap-xs">
+        <p class="shrink-0">build with</p>
+        <ul class="tmp | flex flex-wrap gap-xs">
+            {% for item in tools.items %}
+                <li>
+                    <a
+                        href="{{ item.url }}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >
+                        {{ item.text }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </span>
+</footer>

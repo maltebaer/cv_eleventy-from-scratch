@@ -1,0 +1,48 @@
+<fieldset
+    x-data="{
+        setTheme(theme) {
+            const html = document.firstElementChild
+
+            html.setAttribute('theme', theme)
+        }
+    }"
+    x-on:change="setTheme($event.target.value)">
+    <legend>theme</legend>
+
+    <div class="switcher">
+        {% for item in themes.items %}
+            <label>
+                <input
+                    type="radio"
+                    name="theme"
+                    value="{{ item }}"
+                    {% if loop.first %} checked {% endif %}/>
+                <span>{{ item }}</span>
+            </label>
+        {% endfor %}
+    </div>
+</fieldset>
+
+<fieldset
+    x-data="{
+        toggleStylesheet(layer) {
+            const stylesheet = document.getElementById(layer + '-stylesheet')
+
+            stylesheet.toggleAttribute('disabled')
+        }
+    }"
+    x-on:change="toggleStylesheet($event.target.value)">
+    <legend>css layers</legend>
+
+    <div class="switcher">
+        {% for item in cssLayers.items %}
+            <label>
+                <input
+                    type="checkbox"
+                    value="{{ item }}"
+                    checked/>
+                <span>{{ item }}</span>
+            </label>
+        {% endfor %}
+    </div>
+</fieldset>

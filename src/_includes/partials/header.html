@@ -1,0 +1,12 @@
+<a href="#main-content">Skip to content</a>
+<header class="header">
+    <nav class="wrapper">
+        <ul>
+            {% for item in navigation.items %}
+                <li>
+                    <a href="{{ item.url }}">{{ item.text }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
+</header>
