@@ -4,14 +4,14 @@
     <span class="tmp | flex gap-xs">
         <p class="shrink-0">build with</p>
         <ul class="tmp | flex flex-wrap gap-xs">
-            {% for item in tools.items %}
+            {% for tool in tools.items %}
                 <li>
                     <a
-                        href="{{ item.url }}"
+                        href="{{ tool.url }}"
                         target="_blank"
                         rel="noopener noreferrer"
                         >
-                        {{ item.text }}
+                        {{ tool.text }}
                     </a>
                 </li>
             {% endfor %}

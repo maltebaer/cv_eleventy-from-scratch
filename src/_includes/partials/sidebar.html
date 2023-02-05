@@ -10,14 +10,14 @@
     <legend>theme</legend>
 
     <div class="switcher">
-        {% for item in themes.items %}
+        {% for theme in themes.items %}
             <label>
                 <input
                     type="radio"
                     name="theme"
-                    value="{{ item }}"
+                    value="{{ theme }}"
                     {% if loop.first %} checked {% endif %}/>
-                <span>{{ item }}</span>
+                <span>{{ theme }}</span>
             </label>
         {% endfor %}
     </div>
@@ -35,13 +35,13 @@
     <legend>css layers</legend>
 
     <div class="switcher">
-        {% for item in cssLayers.items %}
+        {% for layer in cssLayers.items %}
             <label>
                 <input
                     type="checkbox"
-                    value="{{ item }}"
+                    value="{{ layer }}"
                     checked/>
-                <span>{{ item }}</span>
+                <span>{{ layer }}</span>
             </label>
         {% endfor %}
     </div>
