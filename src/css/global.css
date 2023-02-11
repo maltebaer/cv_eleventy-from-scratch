@@ -1,0 +1,21 @@
+@import "fonts.css";
+
+:root {
+    color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: dark;
+    }
+}
+
+[theme="light"] {
+    color-scheme: light;
+}
+[theme="dark"] {
+    color-scheme: dark;
+}
+
+body {
+    font-family: Inter;
+}

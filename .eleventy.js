@@ -1,4 +1,7 @@
-module.exports = config => {
+module.exports = eleventyConfig => {
+    eleventyConfig.addPassthroughCopy("src/css");
+    eleventyConfig.addPassthroughCopy("src/fonts");
+
     return {
         markdownTemplateEngine: 'njk',
         dataTemplateEngine: 'njk',
