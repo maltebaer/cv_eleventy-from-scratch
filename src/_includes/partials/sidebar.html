@@ -1,12 +1,4 @@
-<fieldset
-    x-data="{
-        setTheme(theme) {
-            const html = document.firstElementChild
-
-            html.setAttribute('theme', theme)
-        }
-    }"
-    x-on:change="setTheme($event.target.value)">
+<fieldset>
     <legend>theme</legend>
 
     <div class="switcher">
@@ -16,6 +8,7 @@
                     type="radio"
                     name="theme"
                     value="{{ theme }}"
+                    onchange="document.firstElementChild.setAttribute('theme', value)"
                     {% if loop.first %} checked {% endif %}/>
                 <span>{{ theme }}</span>
             </label>
@@ -23,15 +16,7 @@
     </div>
 </fieldset>
 
-<fieldset
-    x-data="{
-        toggleStylesheet(layer) {
-            const stylesheet = document.getElementById(layer + '-stylesheet')
-
-            stylesheet.toggleAttribute('disabled')
-        }
-    }"
-    x-on:change="toggleStylesheet($event.target.value)">
+<fieldset>
     <legend>css layers</legend>
 
     <div class="switcher">
@@ -40,6 +25,7 @@
                 <input
                     type="checkbox"
                     value="{{ layer }}"
+                    onchange="document.getElementById(value).toggleAttribute('disabled')"
                     checked/>
                 <span>{{ layer }}</span>
             </label>
